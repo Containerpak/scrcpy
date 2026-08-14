@@ -1,4 +1,4 @@
-FROM ghcr.io/containerpak/mesa:main
+FROM ghcr.io/containerpak/mesa64:main
 
 ARG DEBIAN_FRONTEND=noninteractive
 
