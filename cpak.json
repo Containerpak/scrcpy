@@ -1,26 +1,27 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v2.json",
-  "manifest_version": "2.0",
+  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v3.json",
+  "manifest_version": "3.0",
   "name": "scrcpy",
   "description": "Display and control Android devices over USB or TCP/IP.",
   "version": "3.3.4",
-  "image": "ghcr.io/containerpak/scrcpy:main",
-  "binaries": ["/usr/bin/scrcpy", "/usr/bin/adb"],
-  "desktop_entries": ["/usr/share/applications/scrcpy.desktop", "/usr/share/applications/scrcpy-console.desktop"],
+  "image": "ghcr.io/containerpak/scrcpy@sha256:1a0598e47c9d11fe0e9586a330ae012406f8e5afbfd3c7170bee2f85ce0dfbf2",
+  "binaries": [
+    "/usr/bin/scrcpy",
+    "/usr/bin/adb"
+  ],
+  "desktop_entries": [
+    "/usr/share/applications/scrcpy.desktop",
+    "/usr/share/applications/scrcpy-console.desktop"
+  ],
   "dependencies": [],
   "addons": [],
   "idle_time": 0,
   "override": {
-    "socketX11": true,
     "socketWayland": true,
     "socketPulseAudio": true,
-    "socketSessionBus": true,
-    "socketSystemBus": false,
     "socketSshAgent": false,
     "socketCups": false,
     "socketGpgAgent": false,
-    "socketAtSpiBus": true,
-    "socketBluetooth": false,
     "deviceDri": true,
     "deviceKvm": false,
     "deviceShm": false,
@@ -32,7 +33,12 @@
     "deviceAll": false,
     "notification": false,
     "openURI": false,
-    "filesystem": [{"path": "home", "access": "read-write"}],
+    "filesystem": [
+      {
+        "path": "home",
+        "access": "read-write"
+      }
+    ],
     "env": [],
     "network": true,
     "process": false,
@@ -40,7 +46,6 @@
     "memoryMaxMB": 0,
     "cpuQuota": 0,
     "pidsMax": 0,
-    "asRoot": false,
-    "allowedHostCommands": []
+    "asRoot": false
   }
 }
