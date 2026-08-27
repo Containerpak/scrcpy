@@ -4,7 +4,7 @@
   "name": "scrcpy",
   "description": "Display and control Android devices over USB or TCP/IP.",
   "version": "3.3.4",
-  "image": "ghcr.io/containerpak/scrcpy@sha256:1a0598e47c9d11fe0e9586a330ae012406f8e5afbfd3c7170bee2f85ce0dfbf2",
+  "image": "ghcr.io/containerpak/scrcpy@sha256:0a7cdac470508c10a8cb56ba4e3254c2962df58528ca1aedf49cb743380c1631",
   "binaries": [
     "/usr/bin/scrcpy",
     "/usr/bin/adb"
